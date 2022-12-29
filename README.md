@@ -196,8 +196,25 @@ Overall, Fiddler is a powerful tool for mobile testing that can be used to debug
 
 ![image](https://user-images.githubusercontent.com/70295997/209910320-4f86c112-268e-4875-bf7e-16b520aa2cca.png)
 
+# What is Appium?
 
+Appium is an open-source tool for automating the testing of mobile applications. It allows you to write and run automated tests for native, hybrid, and web apps on Android and iOS devices. Some of the key features of Appium include:
 
+1. Cross-platform support: Appium supports testing on both Android and iOS platforms, using a single API and a single set of test scripts.
+2. Language support: Appium supports a wide range of programming languages, including Java, Python, Ruby, C#, and JavaScript, making it easy to integrate into your existing test automation workflow.
+3. Native and web app support: Appium can be used to test native apps (installed on the device) and web apps (accessed through the device's web browser).
+4. Inspect and control elements: Appium provides an inspector tool that allows you to inspect the elements of your app and interact with them using test scripts.
+5. Integration with other tools: Appium can be integrated with a range of tools and frameworks, such as Jenkins, Selenium, and TestNG, to provide a complete test automation solution.
+
+Overall, Appium is a popular and widely-used tool for automating the testing of mobile applications. It provides a range of features and support for multiple platforms, languages, and app types, making it a flexible and powerful choice for mobile testing.
+
+![image](https://user-images.githubusercontent.com/70295997/209910628-021ee53b-4843-4931-8eb8-87d94b5acd3f.png)
+
+## How to use Appium with Python?
+
+![image](https://user-images.githubusercontent.com/70295997/209910917-948cfed4-6aa7-4182-b116-b6515d1f1460.png)
+![image](https://user-images.githubusercontent.com/70295997/209910972-a34cb751-4bab-496d-8d84-ea172b794ddc.png)
+![image](https://user-images.githubusercontent.com/70295997/209911074-94c467f8-97f9-4854-8840-1ecca082e3e8.png)
 
 
 
