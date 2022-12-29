@@ -74,6 +74,72 @@ There is a difference in ADB commands used for installing mobile apps on Android
 
 ![image](https://user-images.githubusercontent.com/70295997/209905105-4311da1b-5d83-4af4-a8b4-e7303e5e4e63.png)
 
+## I want to capture a video, How can I do it with an adb command?
+
+![image](https://user-images.githubusercontent.com/70295997/209906473-321b125a-969a-4be6-b27e-d8347781b8a9.png)
+![image](https://user-images.githubusercontent.com/70295997/209906532-e8c5aa0a-f428-4202-95fc-7cf8cb6db0b8.png)
+
+## You started working on your device and you observe a crash. How do you collect logs?
+
+![image](https://user-images.githubusercontent.com/70295997/209906650-c6030e5f-36c9-4d1e-896d-7d4caf7d9a98.png)
+![image](https://user-images.githubusercontent.com/70295997/209906715-be1f2aef-3809-4b4d-870f-848da18058ee.png)
+
+№№ How do you use adb bugreport command to collect the logs?
+
+![image](https://user-images.githubusercontent.com/70295997/209906780-6648a836-978f-41b9-91fc-9bc7683110ec.png)
+![image](https://user-images.githubusercontent.com/70295997/209906902-f5564be5-c84c-43f3-aeba-4ecaab7d34bd.png)
+
+№№ What is the main difference between ‘adb logcat’ and ‘adb bugreport’?
+
+![image](https://user-images.githubusercontent.com/70295997/209907030-ee4ecbba-e711-43cb-a90a-b52ee873ff04.png)
+![image](https://user-images.githubusercontent.com/70295997/209907074-4fe7ed7e-91ec-4498-9e7d-49491a23fe32.png)
+
+## You use the YouTube application, how you can get log file for YouTube?
+
+![image](https://user-images.githubusercontent.com/70295997/209907246-680f03fc-249d-420c-84cd-510fde935b27.png)
+![image](https://user-images.githubusercontent.com/70295997/209907319-64e72fec-8e67-4fa2-84d5-4a85c575a154.png)
+
+## You use the Gmail app and you type and a crash happens. How do you justify that crash for this particular app?
+
+![image](https://user-images.githubusercontent.com/70295997/209907467-9cbbc155-3953-46fb-a510-8bef09a7639d.png)
+![image](https://user-images.githubusercontent.com/70295997/209907558-372c4b29-9387-4f57-92c3-5988be06fa38.png)
+![image](https://user-images.githubusercontent.com/70295997/209907614-5e5ac435-291c-471a-ba71-805d2c7f08ef.png)
+
+## If you open your log, what is the information you check for?
+
+![image](https://user-images.githubusercontent.com/70295997/209907664-e7ad528b-2daa-496f-8234-36a4aeb9f8be.png)
+![image](https://user-images.githubusercontent.com/70295997/209907714-6be2cb63-6d35-49b2-833b-d8f2036c862f.png)
+
+## How to install an app on iOS devices?
+
+![image](https://user-images.githubusercontent.com/70295997/209907860-5c6b04a6-c83e-4be1-b187-db3e73e7a304.png)
+
+## How to install an app on iOS devices?
+
+![image](https://user-images.githubusercontent.com/70295997/209908238-d63fe0a6-7a83-4c04-9904-9b4617a6e36d.png)
+![image](https://user-images.githubusercontent.com/70295997/209908303-cba56c54-4b52-4098-ba40-5556ac08f324.png)
+![image](https://user-images.githubusercontent.com/70295997/209908370-546d572e-4526-480f-a7c5-b3da6ac4a568.png)
+
+
+To install a test app on an iOS device from your local machine using drag-and-drop, you can use the Xcode integrated development environment (IDE). Here is the general process for installing a test app on an iOS device using Xcode:
+
+Connect the device to your machine: Use a USB cable to connect the device to your machine. Make sure that the device is recognized by Xcode and appears in the Devices window.
+
+Drag and drop the app onto the device: In Finder (on macOS), navigate to the location where the test app is stored. Drag and drop the app onto the device in the Devices window in Xcode.
+
+Wait for the app to install: The app will be installed on the device automatically. You can monitor the progress in the Xcode console.
+
+Test the app: Use the app on the device to test its functionality and behavior. You can use the Xcode debugger to set breakpoints and step through the code, or use other tools and techniques to test the app.
+
+Overall, using Xcode is a simple and straightforward way to install a test app on an iOS device from your local machine using drag-and-drop. This process does not require the use of any command-line tools or commands.
+
+
+
+
+
+
+
+
 
 
 
