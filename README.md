@@ -161,7 +161,7 @@ To enable Developer options on an iOS device, you can follow these steps:
 
 Overall, enabling Developer options on an iOS device is a simple process that allows you to access advanced developer features and settings. Once you have enabled Developer options, you can use them to test and debug your app, as well as customize your device's behavior and appearance.
 
-What is Charles Proxy?
+## What is Charles Proxy?
 
 Charles Proxy is a popular tool for debugging, testing, and optimizing web and mobile applications. It is particularly useful for mobile testing because it allows you to intercept and inspect HTTP and HTTPS traffic from mobile devices. This can be useful for a wide range of testing and debugging scenarios, such as:
 
@@ -170,7 +170,7 @@ Charles Proxy is a popular tool for debugging, testing, and optimizing web and m
 - Analyzing the performance of your app's network communication
 - Inspecting the data being sent and received by your app
 - To use Charles Proxy for mobile testing, you will need to install the Charles Proxy software on your computer and configure your mobile device to use it as a proxy. 
-- 
+
 Here is a general outline of the process:
 
 1. Download and install Charles Proxy: Go to the Charles Proxy website and download the latest version of the software. Follow the instructions to install it on your computer.
@@ -180,6 +180,24 @@ Here is a general outline of the process:
 5. Inspect the traffic: In Charles Proxy, you can inspect the traffic captured from your mobile device. You can view the request and response headers, payloads, and other details. You can also use the Charles Proxy tools to analyze and debug the traffic.
 
 Overall, Charles Proxy is a powerful and useful tool for mobile testing that allows you to inspect and debug the network communication of your app. It can be particularly useful for identifying and troubleshooting issues with network requests and responses, and for optimizing the performance of your app.
+
+![image](https://user-images.githubusercontent.com/70295997/209909995-ddd61c6c-f20f-4962-9a5d-60a04f1394c5.png)
+
+## What is Fiddler?
+
+Fiddler is a web debugging tool that allows you to intercept and analyze HTTP traffic between a client (such as a mobile device) and a server. It can be useful for mobile testing in a number of ways:
+
+1. Debugging network requests: Fiddler allows you to view and analyze the network requests made by your mobile app, including the request and response headers, the body of the request and response, and any cookies or other metadata. This can be helpful for debugging issues with network requests, such as errors or timeouts.
+2. Modifying network requests: Fiddler allows you to modify the network requests made by your mobile app in real-time. This can be helpful for testing different scenarios, such as different responses from the server or different network conditions.
+3. Analyzing performance: Fiddler provides a range of performance metrics, such as the time taken to complete a request and the size of the request and response. This can be helpful for identifying and optimizing the performance of your mobile app.
+4. Testing security: Fiddler allows you to intercept and modify SSL/TLS traffic, which can be useful for testing the security of your mobile app.
+
+Overall, Fiddler is a powerful tool for mobile testing that can be used to debug, test, and optimize the network performance of your app. To use Fiddler for mobile testing, you will need to install the Fiddler app on your mobile device and configure your device to use Fiddler as a proxy server. You will also need to install the Fiddler desktop application on your computer and configure it to capture and analyze traffic.
+
+![image](https://user-images.githubusercontent.com/70295997/209910320-4f86c112-268e-4875-bf7e-16b520aa2cca.png)
+
+
+
 
 
 
