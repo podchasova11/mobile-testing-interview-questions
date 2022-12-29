@@ -70,6 +70,9 @@ There is a difference in ADB commands used for installing mobile apps on Android
 
 ![image](https://user-images.githubusercontent.com/70295997/209904192-26749182-7f27-4ccd-86d4-aae94c07fbdf.png)
 
+## If you have an old version installed, and you don’t want to lose your data, how you install a new .apk file?
+
+![image](https://user-images.githubusercontent.com/70295997/209905105-4311da1b-5d83-4af4-a8b4-e7303e5e4e63.png)
 
 
 
