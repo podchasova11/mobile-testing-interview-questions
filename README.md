@@ -68,6 +68,7 @@ There is a difference in ADB commands used for installing mobile apps on Android
 
       adb -s emulator-5555 install helloWorld.apk
 
+![image](https://user-images.githubusercontent.com/70295997/209904192-26749182-7f27-4ccd-86d4-aae94c07fbdf.png)
 
 
 
