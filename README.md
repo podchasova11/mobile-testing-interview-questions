@@ -96,9 +96,9 @@ If you have an old version of an Android app installed on your device and you wa
 
             adb install -r <path-to-apk-file>
       
-The __-r__ flag indicates that the app should be installed and the existing data should be kept.
+      The __-r__ flag indicates that the app should be installed and the existing data should be kept.
 
-For example:
+      For example:
 
             adb install -r app.apk
 
