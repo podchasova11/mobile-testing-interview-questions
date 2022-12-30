@@ -86,12 +86,81 @@ There is a difference in ADB commands used for installing mobile apps on Android
 
 ## If you have an old version installed, and you don’t want to lose your data, how you install a new .apk file?
 
-![image](https://user-images.githubusercontent.com/70295997/209905105-4311da1b-5d83-4af4-a8b4-e7303e5e4e63.png)
+If you have an old version of an Android app installed on your device and you want to install a new version of the app without losing your data, you can use the following steps:
+
+1. Download the new version of the app: Download the new version of the app in the form of an APK file.
+
+2. Connect the device to your machine: Use a USB cable to connect the device to your machine. Make sure that USB debugging is enabled on the device.
+
+3. Install the new version of the app: Use the Android Debug Bridge (ADB) tool to install the new version of the app on the device. To do this, open a terminal or command prompt and navigate to the directory where the Android SDK is installed. Then, use the following ADB command:
+
+            adb install -r <path-to-apk-file>
+      
+The __-r__ flag indicates that the app should be installed and the existing data should be kept.
+
+For example:
+
+            adb install -r app.apk
+
+4. Test the app: After installing the new version of the app, it is important to test it to ensure that it is functioning correctly and that your data has been preserved. This might involve manually interacting with the app and verifying that it behaves as expected, or using automated testing tools and frameworks to execute a series of tests on the app.
+
+Overall, using ADB to install a new version of an Android app while preserving the existing data can be a convenient and efficient way to update an app on a device, particularly during the development and testing process.
 
 ## I want to capture a video, How can I do it with an adb command?
 
-![image](https://user-images.githubusercontent.com/70295997/209906473-321b125a-969a-4be6-b27e-d8347781b8a9.png)
-![image](https://user-images.githubusercontent.com/70295997/209906532-e8c5aa0a-f428-4202-95fc-7cf8cb6db0b8.png)
+You can use the _screenrecord_ command, which is an ADB shell utility to capture a video of the screen on an Android device (Android 4.4 (API level 19) and higher). The utility records screen activity to an MPEG-4 file. To do this, follow these steps:
+
+1. Connect the device to your machine: Use a USB cable to connect the device to your machine. Make sure that USB debugging is enabled on the device.
+
+2. Start the ADB shell: Open a terminal or command prompt and navigate to the directory where the Android SDK is installed. Then, use the following command to start the ADB shell:
+
+            adb shell
+
+3. Start the screenrecord command: Within the ADB shell, use the following command to start the screenrecord command:
+
+            screenrecord /sdcard/<video-name>.mp4
+
+      You can combine the above commands into one:
+      
+            adb shell screenrecord /sdcard/<video-name>.mp4
+
+      This will start capturing a video of the screen and saving it to the device's SD card. Replace _video-name_ with the desired name for the video file.
+
+4. Perform the actions that you want to capture in the video: Once the video capture is started, perform the actions that you want to capture in the video.
+      
+5. Stop the screenrecord command: To stop the video capture and save the video, press CTRL+C in the terminal or command prompt. Alternately, use the following ADB command:
+      
+            adb shell killall screenrecord
+
+6. Retrieve the video from the device: To retrieve the video from the device, use the following ADB command:
+
+            adb pull /sdcard/<video-name>.mp4
+
+This will copy the video file from the device's SD card to your machine.
+
+You can pass various options into the screenrecord command:
+
+            adb shell screenrecord --size 1280x720 /sdcard/<video-name>.mp4
+            adb shell screenrecord --bit-rate 4000000 /sdcard/<video-name>.mp4
+            adb shell screenrecord --time-limit=120 /sdcard/<video-name>.mp4
+            adb shell screenrecord --verbose /sdcard/<video-name>.mp4
+            adb shell screenrecord --help /sdcard/<video-name>.mp4
+
+Limitations of the screenrecord utility:
+- Audio is not recorded with the video file.
+- Video recording is not available for devices running Wear OS.
+- Some devices might not be able to record at their native display resolution. If you encounter problems with screen recording, try using a lower screen resolution.
+- Rotation of the screen during recording is not supported. If the screen does rotate during recording, some of the screen is cut off in the recording.
+
+Overall, using the ADB screenrecord command can be a convenient way to capture a video of the screen on an Android device. You can use this technique to record video during testing or debugging, or to create demos or tutorials. Using ADB to capture a video of the screen on an Android device can be a useful way to record and analyze the behavior of an app or to troubleshoot issues.
+
+----
+
+[Kill Processes in Linux – Kill, Pkill, Killall Commands](https://linuxnightly.com/kill-processes-in-linux-kill-pkill-killall-commands/)
+
+[Record a Video](https://developer.android.com/studio/command-line/adb#screenrecord)
+
+[adb shell screenrecord](https://adbshell.com/commands/adb-shell-screenrecord)
 
 ## You started working on your device and you observe a crash. How do you collect logs?
 
