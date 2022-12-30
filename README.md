@@ -167,12 +167,12 @@ Overall, using the ADB screenrecord command can be a convenient way to capture a
 ![image](https://user-images.githubusercontent.com/70295997/209906650-c6030e5f-36c9-4d1e-896d-7d4caf7d9a98.png)
 ![image](https://user-images.githubusercontent.com/70295997/209906715-be1f2aef-3809-4b4d-870f-848da18058ee.png)
 
-№№ How do you use adb bugreport command to collect the logs?
+## How do you use adb bugreport command to collect the logs?
 
 ![image](https://user-images.githubusercontent.com/70295997/209906780-6648a836-978f-41b9-91fc-9bc7683110ec.png)
 ![image](https://user-images.githubusercontent.com/70295997/209906902-f5564be5-c84c-43f3-aeba-4ecaab7d34bd.png)
 
-№№ What is the main difference between ‘adb logcat’ and ‘adb bugreport’?
+## What is the main difference between ‘adb logcat’ and ‘adb bugreport’?
 
 ![image](https://user-images.githubusercontent.com/70295997/209907030-ee4ecbba-e711-43cb-a90a-b52ee873ff04.png)
 ![image](https://user-images.githubusercontent.com/70295997/209907074-4fe7ed7e-91ec-4498-9e7d-49491a23fe32.png)
@@ -279,7 +279,7 @@ Overall, Fiddler is a powerful tool for mobile testing that can be used to debug
 
 ![image](https://user-images.githubusercontent.com/70295997/209910320-4f86c112-268e-4875-bf7e-16b520aa2cca.png)
 
-# What is Appium?
+## What is Appium?
 
 Appium is an open-source tool for automating the testing of mobile applications. It allows you to write and run automated tests for native, hybrid, and web apps on Android and iOS devices. Some of the key features of Appium include:
 
