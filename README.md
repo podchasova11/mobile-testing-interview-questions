@@ -66,21 +66,13 @@ Overall, mobile fragmentation can make it challenging for developers to create a
 ![image](https://user-images.githubusercontent.com/70295997/209901211-84dc2943-27fa-49c3-a6c5-487e28a20ff9.png)
 ![image](https://user-images.githubusercontent.com/70295997/209901316-d1a194f4-ce69-4150-a7e9-b35097f6856b.png)
 
-## List top favorite mobile testing tools and why. Give examples.
+## List top favorite mobile testing and debugging tools
 
-![image](https://user-images.githubusercontent.com/70295997/209901478-9a9b38c9-8cf6-42d3-b2f6-721573be8811.png)
-![image](https://user-images.githubusercontent.com/70295997/209902220-895c426f-e1d3-4771-8b23-39fa8338cc95.png)
-
-## List top favorite mobile debugging tools and why. Give examples.
-
-![image](https://user-images.githubusercontent.com/70295997/209902340-6e537bbc-2108-44e1-b155-9c2a6787244b.png)
-![image](https://user-images.githubusercontent.com/70295997/209902424-1677a2f0-e00f-43d9-bd50-7341a9f3d4b0.png)
-![image](https://user-images.githubusercontent.com/70295997/209902492-6eb28150-d218-434a-bd1f-763ac032eb03.png)
+[Detailed Response](https://github.com/lana-20/mobile-testing-debugging-tools)
 
 ## What is ANR and how does it differ from crashes?
-![image](https://user-images.githubusercontent.com/70295997/209902597-9885a188-2924-4e1c-89e2-1c9c93605465.png)
-![image](https://user-images.githubusercontent.com/70295997/209902645-336df4ff-ac3c-4f7e-8903-956a46874ade.png)
-![image](https://user-images.githubusercontent.com/70295997/209902728-9781d0cf-7d52-4e97-8699-a7520ad7d229.png)
+
+[Detailed Response](https://github.com/lana-20/anr-vs-crash)
 
 ## If you have several Android devices (virtual emulators and/or physical phones) connected to your machine, how do you install an application?
 
