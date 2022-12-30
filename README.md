@@ -27,9 +27,31 @@
 
 ## What is mobile fragmentation?
 
-![image](https://user-images.githubusercontent.com/70295997/209900576-d766aeb5-17fc-4b13-ae0d-49c692b6843e.png)
-![image](https://user-images.githubusercontent.com/70295997/209900598-c711ee31-f0cf-4980-93c5-ea8ae3d06a9f.png)
-![image](https://user-images.githubusercontent.com/70295997/209900627-f30ae56e-30a6-43b0-8b65-80871471ae8c.png)
+[Detailed Explanation with Supporting Data](https://github.com/lana-20/mobile-fragmentation)
+
+Definitions (various versions):
+
+_Version 1_
+
+Mobile fragmentation refers to the diverse range of hardware and software configurations that exist among mobile devices, such as smartphones and tablets. This can include differences in screen size, processor type and speed, amount of memory, and version of the operating system. Mobile fragmentation can make it difficult for developers to create apps that work consistently across all devices, and can also pose challenges for users in terms of accessing certain features or finding compatible apps. In general, the more fragmented a mobile ecosystem is, the more difficult it is for developers to create apps and for users to have a consistent experience across devices.
+
+_Version 2_
+
+Mobile fragmentation is the term used to describe the wide range of different hardware and software configurations that exist in the mobile device market. This can include differences in the types of processors, screen sizes and resolutions, and operating systems that are used on mobile devices.
+
+One of the main challenges of mobile fragmentation is that it can make it difficult for developers to create apps and other software that work effectively on all devices. For example, an app that is designed to work on one type of device might not work as well on another device with a different screen size or operating system. As a result, developers may need to create multiple versions of their apps in order to support all the different devices that are available.
+
+Mobile fragmentation can also be a challenge for users, as it can make it difficult to choose a device that will work well with the apps and services they want to use. Additionally, if an app or service is not available on a particular device, users may need to switch to a different device in order to access it.
+
+_Version 3_
+
+Mobile fragmentation refers to the wide range of different hardware and software configurations that exist in the mobile market. This includes variations in device brands, models, operating systems, screen sizes, and other hardware and software features. As a result of this fragmentation, it can be difficult for developers to create apps that work seamlessly across all devices and for users to have a consistent experience across different devices.
+
+One aspect of mobile fragmentation is the diversity of operating systems that are used on mobile devices. While the two most popular mobile operating systems are Android and iOS, there are also many other operating systems used on a smaller scale, such as KaiOS and Tizen. Each operating system has its own set of technical specifications and capabilities, which can make it challenging for developers to create apps that are compatible with all of them.
+
+Another aspect of mobile fragmentation is the wide range of hardware configurations that exist within each operating system. For example, even within the Android operating system, there are many different device manufacturers, each with their own hardware specifications and capabilities. This can make it difficult for developers to optimize their apps for all of the different hardware configurations that exist.
+
+Overall, mobile fragmentation can make it challenging for developers to create apps that work consistently across all devices and can lead to a less cohesive user experience for people using different devices.
 
 ## How to test a home screen of an app?
 
