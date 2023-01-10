@@ -1,4 +1,9 @@
+***REPO CONSTRUCTION IS IN PROGRESS***
+
+
 # Mobile Testing Q&A
+
+
 
 ## Most used ADB commands
 
