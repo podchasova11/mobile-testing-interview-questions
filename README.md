@@ -248,9 +248,11 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
             adb pull /sdcard/<video_name>.mp4
 
-This will copy the video file from the device's SD card to your machine. 
+      This will copy the video file from the device's SD card to the current working directory on the local machine.         Alternatively, pull the video file to a specific folder:
       
-If there are any issues with the file retrieval, verify the file has been saved in the device's <code>/sdcard</code> folder:
+            adb pull /sdcard/<video_name>.mp4 /Documents
+      
+      If there are any issues with the file retrieval, verify the file has been saved in the device's <code>/sdcard</code> folder:
 
             & adb shell
             emulator64_arm64:/ $ ls
