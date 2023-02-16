@@ -15,9 +15,29 @@
 
 ## Important things to remember while testing mobile apps
 
-![image](https://user-images.githubusercontent.com/70295997/209899814-be8745b2-b35d-4565-8c60-af68c74cae20.png)
-![image](https://user-images.githubusercontent.com/70295997/209899887-c6d1f54b-e921-4461-9632-e1811399d14a.png)
-![image](https://user-images.githubusercontent.com/70295997/209900037-ab2e8de4-dfb9-4a65-8a47-698d002ff5f7.png)
+When testing mobile apps, it's important to consider a variety of factors to ensure a high-quality user experience. This includes testing on a range of devices, operating systems, and network conditions, as well as testing for performance, usability, compatibility, security, accessibility, and localization. Additionally, testing for different user scenarios and flows can help ensure that the app is easy to use and provides a good experience for all users. 
+
+1. Test on a range of devices: It's important to test your app on a variety of different devices to ensure that it works well on different screen sizes and hardware/software configurations. This may include testing on different types of phones, tablets, and other mobile devices, as well as testing on different operating systems.
+      - [ ] Test for compatibility: Make sure that your app is compatible with the different versions of the operating system that it is designed to work on.
+      - [ ] Test on different operating systems: If your app is available on multiple platforms (e.g. iOS and Android), make sure to test it on all of them to ensure that it functions properly on each platform.
+      - [ ] Test for different screen sizes and resolutions: Mobile devices come in a wide range of screen sizes and resolutions, so it is important to test your app on devices with different screen sizes to ensure that it looks and functions correctly.
+
+2. Test for different network conditions: Mobile devices are often used in a variety of different network conditions, so it is important to test your app under different network conditions (e.g., WiFi, cellular data - 3G, 46, etc., offline mode) to ensure that it  performs well.
+
+3. Test for different user flows/scenarios: Users may use your app in different ways. It is important to test your app for a variety of different user scenarios in order to ensure that it works well in different contexts. For example, you might test your app while the device is in portrait and landscape orientation, while the device is in use by multiple users, or while the device is running low on battery.
+
+4. Test for accessibility: Make sure that your app is accessible to users with disabilities, including those who use assistive technologies such as (e.g. screen readers, text-to-speech, etc).
+
+5. Test for usability: Make sure that your app is easy for users to navigate and use.
+
+6. Test for security: Mobile apps often handle sensitive data (e.g. passwords, personal information, etc.). Make sure that your app is secure and that it protects user data.
+
+7. Test for performance/stability: Mobile apps should be fast and stable. Make sure to test your app's performance and stability, including how quickly it loads and how smoothly it runs. Ensure that the app performs well and does not crash or freeze.
+
+8. Test for localization: If your app is available in multiple languages, make sure to test it in all of the languages it supports to ensure that the translations are accurate and the app functions properly in each language.
+
+
+A thorough and systematic approach to testing can help ensure that mobile apps are of high quality and provide a good user experience.
 
 ## Kinds of interruption testing on mobile apps
 
