@@ -11,7 +11,7 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
 
 - [ ] <code>adb devices</code>: list all  the devices that are connected to your computer and are recognized by ADB.
 
-      % adb devices<
+      % adb devices
       List of devices attached
       A6PVD6LNFQ578HUS  device
       emulator-5554 device
