@@ -161,7 +161,9 @@ For example:
 
       adb -s emulator-5555 install helloWorld.apk
 
-To install an app on either an Android or a physical device using ADB, I use command <code>adb install <path_to_apk_file></code>.  Command <code>adb install app.apk</code> will install the app on all of the connected devices, whether they are virtual or physical  devices.
+To install an app on either an Android or a physical device using ADB, I use command <code>adb install <path_to_apk_file></code>.  Command <code>adb install app.apk</code> will install the app on a single connected device, whether it's virtual or physical. If more than one device is running, I get the following error:
+
+      adb: error: failed to get feature set: more than one device/emulator
 
 Overall the process of installing apps on Android emulators or physical devices using ADB is similar. But there are some differences to consider:
 
