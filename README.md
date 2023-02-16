@@ -11,7 +11,12 @@
 
 ## Tools used to record crash logs for iOS
 
-![image](https://user-images.githubusercontent.com/70295997/209899629-eadd2d56-35b6-4bd0-b276-5c601413f972.png)
+There are several tools that can be used to record crash logs for iOS devices. One of the most commonly used tools is Apple's Xcode development environment, which includes a built-in crash log organizer.
+
+- [ ] To use Xcode to view crash logs for an iOS device, you'll need to connect the device to your computer and select it as the target device in Xcode. Then, go to the "Window" menu and select "Devices and Simulators" to open the Devices window. In the Devices window, select your device, and then select the "Crash Logs" tab to view a list of crash logs for your device.
+- [ ] Another tool that can be used to view crash logs for iOS devices is iTunes. To view crash logs using iTunes, connect the device to your computer and select it in iTunes. Then, click the "View Device Logs" button in the "Device" section of the iTunes window.
+- [ ] Finally, you can also use the iOS Console app to view crash logs for an iOS device. To do this, you'll need to install the app from the App Store and then connect the device to your computer using a USB cable. Once the device is connected, the iOS Console app will display a list of crash logs for the device.
+- [ ] To access the logs on the physical iOS device go to Settings > Privacy > Analytics and Improvements > Analytics Data.
 
 ## Important things to remember while testing mobile apps
 
@@ -41,9 +46,18 @@ A thorough and systematic approach to testing can help ensure that mobile apps a
 
 ## Kinds of interruption testing on mobile apps
 
-![image](https://user-images.githubusercontent.com/70295997/209900182-3b840014-b118-444c-9a66-bfcca7e783aa.png)
-![image](https://user-images.githubusercontent.com/70295997/209900307-7b9547fc-cf4b-465e-b00f-d5fea5b07a36.png)
-![image](https://user-images.githubusercontent.com/70295997/209900368-999155dc-d4e7-4f7a-a892-16b22be6ad61.png)
+Interruption Testing is a type of testing that involves simulating various types of interruptions or distractions that a user may experience while using a mobile app. Some common types of interruptions that may be tested include:
+- [ ] Incoming Phone Calls: If an app is being used and an incoming phone call is received, it’s important to test how the app handles the interruption. Does it pause or stop functioning? Does it allow the user to continue using the app while the call is being taken?
+- [ ] Incoming Text Messages: Similar to phone calls, incoming texts can interrupt an app and cause it to pause or close. This type of interruption tests how the app handles an incoming text message while it’s being used and ensures it resumes correctly after the interruption ends.
+- [ ] Notifications: Mobile apps often generate (push) notifications to alert the user of new events or updates. It’s important to test how the app handles notifications and whether the user is able to continue using the app while the notification is being displayed.
+- [ ] System Alerts: The OS may generate alerts or notifications that interrupt the app. It’s important to test how the app handles these interruptions and whether it allows the user to continue using the app while the alert is being displayed.
+- [ ] System Updates: If the device’s OS is updated while the app is being used, it can interrupt the app and cause it to close. It’s important to test how the app handles these interruptions and ensure that it can resume correctly after the update is complete.
+- [ ] Low Battery or Power Loss: If the device’s battery is running low or the device loses power, it can interrupt the app and cause it to close. It’s important to test how the app handles the interruption and whether it allows the user to continue and save all the important data while the device is being charged.
+- [ ] Multitasking / App Switching / Multi-Window: Many mobile devices allow users to multitask and switch between multiple apps. It’s important to test how the app handles multitasking an whether it allows the user to continue using the app while other apps are being used. App switching tests how the app handles being switched out of the foreground and into the background.
+- [ ] Device Rotation:  This type of interruption tests how the app handles the device being rotated from portrait to landscape and vice versa.
+- [ ] Network Changes:  If the device’s network connection changes while the app is being used (e.g. from WiFi to cellular data), it can interrupt the app and cause it to behave differently. It’s important to test how the zoo handles these interruptions and ensure that it functions properly under different network conditions.
+It’s crucial to test these types of interruptions that may occur while the app is being used to ensure the app provides smooth, seamless, uninterrupted, stable and consistent user experience.
+
 
 ## Difference between mobile and web application testing
 
