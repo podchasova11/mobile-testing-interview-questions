@@ -261,6 +261,8 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
             emulator64_arm64:/sdcard $ ls
             … video_name.mp4 …
 
+      Also make sure to <code>exit</code> the device <code>shell</code> prior to pulling the file to your computer. Because ADB is a server that lives on your machine, not inside the device directory.
+      
 You can pass various options into the screenrecord command:
 
             adb shell screenrecord --size 1280x720 /sdcard/<video_name>.mp4
