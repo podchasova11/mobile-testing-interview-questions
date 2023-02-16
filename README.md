@@ -20,7 +20,8 @@ There are several tools that can be used to record crash logs for iOS devices. O
 
 ## Important things to remember while testing mobile apps
 
-When testing mobile apps, it's important to consider a variety of factors to ensure a high-quality user experience. This includes testing on a range of devices, operating systems, and network conditions, as well as testing for performance, usability, compatibility, security, accessibility, and localization. Additionally, testing for different user scenarios and flows can help ensure that the app is easy to use and provides a good experience for all users. 
+When testing mobile apps, I refer to the [Mobile Testing Checklist](https://github.com/lana-20/i_sliced_up_fun-SQA-mnemonic#readme).
+It's important to consider a variety of factors to ensure a high-quality user experience. This includes testing on a range of devices, operating systems, and network conditions, as well as testing for performance, usability, compatibility, security, accessibility, and localization. Additionally, testing for different user scenarios and flows can help ensure that the app is easy to use and provides a good experience for all users. 
 
 1. Test on a range of devices: It's important to test your app on a variety of different devices to ensure that it works well on different screen sizes and hardware/software configurations. This may include testing on different types of phones, tablets, and other mobile devices, as well as testing on different operating systems.
       - [ ] Test for compatibility: Make sure that your app is compatible with the different versions of the operating system that it is designed to work on.
