@@ -28,6 +28,11 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
 - [ ] <code>adb shell</code>: open a shell on the connected device, allowing you to run commands on the device directly
 - [ ] <code>adb push <local_file> <remote_location></code>: copy a file from your computer to the connected device
 - [ ] <code>adb pull <remote_file> <local_location></code>: copy a file from the connected device to your computer
+      
+  - [ ] I often use the command to get a copy of my device screen recording on my computer. For example:
+      
+           adb pull /sdcard/<video_name>.mp4 ~/Documents
+      
 - [ ] <code>adb logcat</code>: display the logical output for the connected device, which can be helpful for debugging
 - [ ] <code>adb shell dumpsys <system_service></code>: display detailed info about a specific system service on the device
 - [ ] <code>adb reboot</code>: reboot the connected device
@@ -250,7 +255,7 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
       This will copy the video file from the device's SD card to the current working directory on the local machine.         Alternatively, pull the video file to a specific folder:
       
-            adb pull /sdcard/<video_name>.mp4 /Documents
+            adb pull /sdcard/<video_name>.mp4 ~/Documents
       
       If there are any issues with the file retrieval, verify the file has been saved in the device's <code>/sdcard</code> folder:
 
