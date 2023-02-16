@@ -9,11 +9,19 @@
 
 Here is a list of some common ADB (Android Debug Bridge) commands which I use frequently:
 
-- [ ] <code>adb devices</code>: list all  the devices that are connected to your computer and are recognized by ADB. Sample Output:
+- [ ] <code>adb devices</code>: list all  the devices that are connected to your computer and are recognized by ADB.
 
+      % adb devices<
       List of devices attached
       A6PVD6LNFQ578HUS  device
       emulator-5554 device
+
+  - [ ] 📝 The <code>emulator -list-avds</code> command also lists devices, but only the virtual ones, and not necessarily the ones which are awake and running.
+
+            % emulator -list-avds
+            Nexus_6_API_30
+            Pixel_6_API_33_-_Galaxy_S23_Skin
+            Pixel_6_Pro_API_33
 
 - [ ] <code>adb install <path_to_apk></code>: install an app (specified by the APK file) on the connected device
 - [ ] <code>adb uninstall <package_name></code>: uninstall an app from the connected device
