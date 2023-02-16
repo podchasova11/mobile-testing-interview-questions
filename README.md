@@ -26,7 +26,13 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
 - [ ] <code>adb install <path_to_apk></code>: install an app (specified by the APK file) on the connected device
 - [ ] <code>adb uninstall <package_name></code>: uninstall an app from the connected device
 - [ ] <code>adb shell</code>: open a shell on the connected device, allowing you to run commands on the device directly
-- [ ] <code>adb push <local_file> <remote_location></code>: copy a file from your computer to the connected device
+- [ ] <code>adb push <local_file> <remote_location></code>: copy a file from your computer to the connected device     
+  - [ ] When testing an upload feature on an app like YouTube or Instagram, I might need to push some files to my device’s <code>/sdcard</code> directory. I can copy a file (image, video, etc.) from the host machine to the mobile device with the following command:
+
+            adb push Desktop/image.png /sdcard/Pictures
+
+      I don’t use <code>shell</code> in the <code>push</code> command, because I push from my computer. <code>adb push</code> is not a util that lives on my mobile device. It’s just a command to exchange files between the the host machine and the connected device. <code>push</code> and <code>pull</code> work in tandem. <code>pull</code> helps me get files from the device, while <code>push</code> helps me push files onto the device.
+      
 - [ ] <code>adb pull <remote_file> <local_location></code>: copy a file from the connected device to your computer
       
   - [ ] I often use the command to get a copy of my device screen recording on my computer. For example:
