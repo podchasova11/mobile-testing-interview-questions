@@ -194,7 +194,7 @@ If you have an old version of an Android app installed on your device and you wa
 
 Overall, using ADB to install a new version of an Android app while preserving the existing data can be a convenient and efficient way to update an app on a device, particularly during the development and testing process.
 
-## How do you install an application?
+## How do you uninstall an application?
 I can uninstall an app by its package name. To obtain a list of all the packages installed on the device, run command <code>adb shell pm list packages</code>. To filter out the results by a keyword contained in the package name, use the <code>-f</code> option, as in <code>adb shell pm list packages -f <key_word></code>. 
       
 Sometimes, package names change. To retrieve a list of 3-rd party packages, installed by the user (not-preinstalled), include the <code>-3</code> option, as in <code>adb shell pm list packages -3</code>. All the vendor-preloaded apps live in the <code>/system</code> directory. All the apps that I, as a user installed, live in the <code>/data/</code> folder. The <code>-3</code> option directs the command to the <code>/data/</code> folder and returns all the apps that reside there.
