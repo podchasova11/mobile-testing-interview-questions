@@ -18,6 +18,8 @@ There are several tools that can be used to record crash logs for iOS devices. O
 - [ ] Finally, you can also use the iOS Console app to view crash logs for an iOS device. To do this, you'll need to install the app from the App Store and then connect the device to your computer using a USB cable. Once the device is connected, the iOS Console app will display a list of crash logs for the device.
 - [ ] To access the logs on the physical iOS device go to Settings > Privacy > Analytics and Improvements > Analytics Data.
 
+The retrieved logs may look undecipherable, becauase they are not symbolicated. Devs can [symbolicate](https://betterprogramming.pub/how-to-symbolicate-crash-logs-in-ios-b05637591364) the iOS crash logs before reading them.
+
 ## Important things to remember while testing mobile apps
 
 When testing mobile apps, I refer to the [Mobile App Testing Checklist](https://github.com/lana-20/i_sliced_up_fun-SQA-mnemonic#readme).
