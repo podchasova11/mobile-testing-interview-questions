@@ -143,13 +143,26 @@ Overall, mobile fragmentation can make it challenging for developers to create a
 
 ## If you have several Android devices (virtual emulators and/or physical phones) connected to your machine, how do you install an application?
 
-If you have multiple devices available but only one is an emulator, use the -e option to send commands to the emulator. If there are multiple devices but only one hardware device attached, use the -d option to send commands to the hardware device.
+If you have multiple devices available but only one is an emulator, use the <code>-e</code> option to send commands to the emulator. If there are multiple devices but only one hardware device attached, use the <code>-d</code> option to send commands to the hardware device.
 
-There is a difference in ADB commands used for installing mobile apps on Android devices vs emulators. In command 'adb [-d |-e | -s serial_number] install path_to_apk', the options in [] are the differentiators. -d is for device, -e is for emulator, -s is for serial number for either physical or virtual device.
+There is a difference in ADB commands used for installing mobile apps on Android devices vs emulators. In command <code>adb [-d |-e | -s serial_number] install <path_to_apk_file></code> the options in <code>[]</code> are the differentiators:
+* <code>-d</code> is for device
+* <code>-e</code> is for emulator
+    - Use the <code>-e</code> option for a physical device, if it's connected to your computer via **WiFi** and not via the USB cable. Point the command to the UDP/TCP port (used by emulators) in lieu of the USB port. 
+ 
+* <code>-s</code> is for serial number for either physical or virtual device.
+   
+For example:
 
       adb -s emulator-5555 install helloWorld.apk
 
-![image](https://user-images.githubusercontent.com/70295997/209904192-26749182-7f27-4ccd-86d4-aae94c07fbdf.png)
+To install an app on either an Android or a physical device using ADB, I use command <code>adb install <path_to_apk_file></code>.  Command <code>adb install app.apk</code> will install the app on all of the connected devices, whether they are virtual or physical  devices.
+
+Overall the process of installing apps on Android emulators or physical devices using ADB is similar. But there are some differences to consider:
+
+* **Emulators**: Need to create and configure the emulators in a development environment like Android Studio. This involves setting up the emulator’s hardware and software configurations and launching the emulator.
+* **Physical Devices**: Need to connect the devices to your machine using USB cables. Make sure that USB debugging is enabled on the devices.
+
 
 ## If you have an old version installed, and you don’t want to lose your data, how you install a new .apk file?
 
@@ -163,7 +176,7 @@ If you have an old version of an Android app installed on your device and you wa
 
             adb install -r <path-to-apk-file>
       
-      The __-r__ flag indicates that the app should be installed and the existing data should be kept.
+      The <code>-r</code> flag indicates that the app should be installed and the existing data should be kept.
 
       For example:
 
@@ -283,9 +296,9 @@ Test the app: Use the app on the device to test its functionality and behavior. 
 
 Overall, using Xcode is a simple and straightforward way to install a test app on an iOS device from your local machine using drag-and-drop. This process does not require the use of any command-line tools or commands.
 
-## How to enable Developer options on Android devices?
+## How to enable Developer Options on Android devices?
 
-To enable Developer options on an Android device, you can follow these steps:
+To enable Developer Options on an Android device, you can follow these steps:
 
 1. Open the Settings app: From the home screen or app drawer, tap the Settings icon to open the Settings app.
 2. Scroll down and tap "About phone": Scroll down to the bottom of the Settings menu and tap the "About phone" option.
@@ -297,9 +310,9 @@ To enable Developer options on an Android device, you can follow these steps:
 
 Overall, enabling Developer options on an Android device is a simple process that allows you to access advanced developer features and settings. Once you have enabled Developer options, you can use them to test and debug your app, as well as customize your device's behavior and appearance.
 
-## How to enable Developer on iOS devices?
+## How to enable Developer Options on iOS devices?
 
-To enable Developer options on an iOS device, you can follow these steps:
+To enable Developer Options on an iOS device, you can follow these steps:
 
 1. Open the Settings app: From the home screen or app drawer, tap the Settings icon to open the Settings app.
 2. Tap "General": Scroll down to the bottom of the Settings menu and tap the "General" option.
