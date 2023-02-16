@@ -246,9 +246,11 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
 6. Retrieve the video from the device: To retrieve the video from the device, use the following ADB command:
 
-            adb pull /sdcard/<video-name>.mp4
+            adb pull /sdcard/<video_name>.mp4
 
-This will copy the video file from the device's SD card to your machine. Verify the file is in the /sdcard folder:
+This will copy the video file from the device's SD card to your machine. 
+      
+If there are any issues with the file retrieval, verify the file has been saved in the device's <code>/sdcard</code> folder:
 
             & adb shell
             emulator64_arm64:/ $ ls
@@ -259,11 +261,11 @@ This will copy the video file from the device's SD card to your machine. Verify 
 
 You can pass various options into the screenrecord command:
 
-            adb shell screenrecord --size 1280x720 /sdcard/<video-name>.mp4
-            adb shell screenrecord --bit-rate 4000000 /sdcard/<video-name>.mp4
-            adb shell screenrecord --time-limit=120 /sdcard/<video-name>.mp4
-            adb shell screenrecord --verbose /sdcard/<video-name>.mp4
-            adb shell screenrecord --help /sdcard/<video-name>.mp4
+            adb shell screenrecord --size 1280x720 /sdcard/<video_name>.mp4
+            adb shell screenrecord --bit-rate 4000000 /sdcard/<video_name>.mp4
+            adb shell screenrecord --time-limit=120 /sdcard/<video_name>.mp4
+            adb shell screenrecord --verbose /sdcard/<video_name>.mp4
+            adb shell screenrecord --help /sdcard/<video_name>.mp4
 
 Limitations of the screenrecord utility:
 - Time limit is 3 minutes.
