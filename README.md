@@ -223,14 +223,21 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
 3. Start the screenrecord command: Within the ADB shell, use the following command to start the screenrecord command:
 
-            screenrecord /sdcard/<video-name>.mp4
+            screenrecord /sdcard/<video_name>.mp4
 
       You can combine the above commands into one:
       
-            adb shell screenrecord /sdcard/<video-name>.mp4
+            adb shell screenrecord /sdcard/<video_name>.mp4
 
-      This will start capturing a video of the screen and saving it to the device's SD card. Replace _video-name_ with the desired name for the video file.
+      This will start capturing a video of the screen and saving it to the device's SD card. Replace <code>video_name</code> with the desired name for the video file.
+      
+      The following error might occur:
+      
+            Unable to get output buffers (err=-38)
+            Encoder failed (err=-38)
 
+      To [resolve](https://android.stackexchange.com/questions/168944/unable-to-get-output-buffers-err-38-when-attempting-to-screen-record-emulator) it, try to use the size option <code>--size widthxheight</code>.
+      
 4. Perform the actions that you want to capture in the video: Once the video capture is started, perform the actions that you want to capture in the video.
       
 5. Stop the screenrecord command: To stop the video capture and save the video, press CTRL+C in the terminal or command prompt. Alternately, use the following ADB command:
@@ -241,7 +248,14 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
             adb pull /sdcard/<video-name>.mp4
 
-This will copy the video file from the device's SD card to your machine.
+This will copy the video file from the device's SD card to your machine. Verify the file is in the /sdcard folder:
+
+            & adb shell
+            emulator64_arm64:/ $ ls
+            … sdcard …
+            emulator64_arm64:/ $ cd sdcard
+            emulator64_arm64:/sdcard $ ls
+            … video_name.mp4 …
 
 You can pass various options into the screenrecord command:
 
@@ -252,6 +266,7 @@ You can pass various options into the screenrecord command:
             adb shell screenrecord --help /sdcard/<video-name>.mp4
 
 Limitations of the screenrecord utility:
+- Time limit is 3 minutes.
 - Audio is not recorded with the video file.
 - Video recording is not available for devices running Wear OS.
 - Some devices might not be able to record at their native display resolution. If you encounter problems with screen recording, try using a lower screen resolution.
