@@ -7,7 +7,22 @@
 
 ## Most used ADB commands
 
-![image](https://user-images.githubusercontent.com/70295997/209899708-28be996f-94aa-4cbb-be22-6173b2015b45.png)
+Here is a list of some common ADB (Android Debug Bridge) commands which I use frequently:
+
+- [ ] <code>adb devices</code>: list all  the devices that are connected to your computer and are recognized by ADB
+- [ ] <code>adb install <path_to_apk></code>: install an app (specified by the APK file) on the connected device
+- [ ] <code>adb uninstall <package_name></code>: uninstall an app from the connected device
+- [ ] <code>adb shell</code>: open a shell on the connected device, allowing you to run commands on the device directly
+- [ ] <code>adb push <local_file> <remote_location></code>: copy a file from your computer to the connected device
+- [ ] <code>adb pull <remote_file> <local_location></code>: copy a file from the connected device to your computer
+- [ ] <code>adb logcat</code>: display the logical output for the connected device, which can be helpful for debugging
+- [ ] <code>adb shell dumpsys <system_service></code>: display detailed info about a specific system service on the device
+- [ ] <code>adb reboot</code>: reboot the connected device
+- [ ] <code>adb backup [-f <file>] [-apk|-noapk] [-shared|-noshared] [-all] [-system|-nosystem] [<packages…>]</code>: create a full backup of the connected device, including apps and their data, system settings, and more
+- [ ] <code>adb --help</code>: see a detailed list of all supported adb commands
+
+These are just a few examples of the many ADB commands that are available. You can find a complete list of ADB commands in the [Android documentation](https://developer.android.com/studio/command-line/adb).
+
 
 ## Tools used to record crash logs for iOS
 
