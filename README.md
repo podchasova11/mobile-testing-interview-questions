@@ -74,6 +74,11 @@ When testin mobile apps, I face challenges specific to the mobile market. For ex
 
 [Detailed Explanation with Supporting Data](https://github.com/lana-20/mobile-fragmentation)
 
+Mobile fragmentation, from the Quality Engineer's perspective, is a challenge of testing a vast variety of devices, screen sizes and resolutions, OSs and OS versions, skins, and UIs. 
+A few years ago, Android accounted for about 24,000 distrinct device configurations.
+A bug may appear in a particular device-OS configuration, that is not reproducible on other environments. 
+For example, I was testing the user registration flow for a biometric authentication app. This flow requires the camera to be pointing at a palm, but in OnePlus 6 device with Android 11 the camera was glitching. So the user was unable to complete the registration.
+
 Definitions (various versions):
 
 _Version 1_
