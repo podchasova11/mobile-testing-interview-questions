@@ -63,8 +63,12 @@ It’s crucial to test these types of interruptions that may occur while the app
 
 When testin mobile apps, I face challenges specific to the mobile market. For example, I have to deal with the memory storage, updates, and more importantly the vast fragmentation of the mobile market. I refer to the [Mobile App Testing Checklist](https://github.com/lana-20/i_sliced_up_fun-SQA-mnemonic#readme) to test mobile-specific crucibles.
 
-![image](https://user-images.githubusercontent.com/70295997/209900435-f527c334-70cc-4cbc-947a-71234de13f5d.png)
-![image](https://user-images.githubusercontent.com/70295997/209900511-55e92402-7855-4363-acd8-f4dac3237b89.png)
+1. **Platform**: One of the main differences between mobile and web application testing is the platform on which the app is running. Mobile apps run on specific mobile devices, such as smartphones and tablets, while web apps run on a web browser and can be accessed from any device with an internet connection.
+2. **User interface**: Mobile apps often have a different user interface (UI) than web apps, as they are designed to be used on smaller screens with different input methods (e.g., touch screen vs. mouse and keyboard). As a result, testing the Ul of a mobile app may require different approaches than testing the Ul of a web app.
+3. **Network conditions**: Mobile apps may be used in a variety of network conditions, including WiFi, cellular data, and offline mode. Testing a mobile app's performance under these different conditions is an important part of the testing process. In contrast, web apps are typically accessed through a stable network via an internet connection, so network conditions are not as significant a factor.
+4. **Operating systems**: Mobile devices use a variety of different operating systems, such as Android and iOS, and it's important to test a mobile app on all the operating systems that it will support. Web apps, on the other hand, are accessed via a web browser and are not as affected by the operating system of the device they are being accessed from.
+5. **Performance**: Mobile devices have limited processing power and memory compared to desktop computers, so it's important to test the performance of a mobile app to ensure that it runs smoothly on a wide range of devices. Web applications may not have the same performance constraints, although it's still important to test their performance to ensure a good user experience.
+
 
 ## What is mobile fragmentation?
 
