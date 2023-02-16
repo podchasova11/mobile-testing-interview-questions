@@ -194,6 +194,15 @@ If you have an old version of an Android app installed on your device and you wa
 
 Overall, using ADB to install a new version of an Android app while preserving the existing data can be a convenient and efficient way to update an app on a device, particularly during the development and testing process.
 
+## How do you install an application?
+I can uninstall an app by its package name. To obtain a list of all the packages installed on the device, run command <code>adb shell pm list packages</code>. To filter out the results by a keyword contained in the package name, use the <code>-f</code> option, as in <code>adb shell pm list packages -f <key_word></code>. 
+      
+Sometimes, package names change. To retrieve a list of 3-rd party packages, installed by the user (not-preinstalled), include the <code>-3</code> option, as in <code>adb shell pm list packages -3</code>. All the vendor-preloaded apps live in the <code>/system</code> directory. All the apps that I, as a user installed, live in the <code>/data/</code> folder. The <code>-3</code> option directs the command to the <code>/data/</code> folder and returns all the apps that reside there.
+
+ 
+The package name convention is usually <code>com.app.company.project</code>. Once I know the package name, I run command <code>adb uninstall <package_name></code> to uninstall the app by that package name. The expected output is <code>Success</code>, and the app is gone from the device.
+
+  
 ## I want to capture a video, How can I do it with an adb command?
 
 You can use the _screenrecord_ command, which is an ADB shell utility to capture a video of the screen on an Android device (Android 4.4 (API level 19) and higher). The utility records screen activity to an MPEG-4 file. To do this, follow these steps:
