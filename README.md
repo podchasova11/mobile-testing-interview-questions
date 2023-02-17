@@ -262,10 +262,13 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
       This will start capturing a video of the screen and saving it to the device's SD card. Replace <code>video_name</code> with the desired name for the video file.
       
-      The following error might occur:
+      The following error might occurs:
       
             Unable to get output buffers (err=-38)
             Encoder failed (err=-38)
+      
+            ERROR: Unable to configure video/avc codec at 1440x3120 (err=-22)
+            WARNING: failed at 1440x3120 retrying at 720x1280
 
       To [resolve](https://android.stackexchange.com/questions/168944/unable-to-get-output-buffers-err-38-when-attempting-to-screen-record-emulator) it, try to use the size option <code>--size widthxheight</code>.
       
@@ -281,7 +284,8 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
       This will copy the video file from the device's SD card to the current working directory on the local machine.         Alternatively, pull the video file to a specific folder:
       
-            adb pull /sdcard/<video_name>.mp4 ~/Documents
+            % adb pull /sdcard/video_name.mp4 ~/Documents
+            /sdcard/video_name.mp4: 1 file pulled, 0 skipped, 33.3 MB/s (2176197 bytes in  0.062s)
       
       If there are any issues with the file retrieval, verify the file has been saved in the device's <code>/sdcard</code> folder:
 
