@@ -51,7 +51,7 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
   - [ ] I often use the command to get a copy of my device screen recording on my computer. I also utilize the command to get a copy of an app on my computer by its package name. For example:
       
            adb pull /sdcard/<video_name>.mp4 ~/Documents
-           adb pull /data/app/com.app.company.project==/test_app.apk
+           adb pull /data/app/~~TwHdRTDoNtvL1DRfi8jrCS==/com.myapp.app-3MsubaTFWY_02Tgq-TNEAN==/base.apk
          
 - [ ] <code>adb logcat</code>: display the logical output for the connected device, which can be helpful for debugging
 - [ ] <code>adb shell dumpsys <system_service></code>: display detailed info about a specific system service on the device
