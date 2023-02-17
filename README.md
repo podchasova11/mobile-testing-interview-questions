@@ -292,7 +292,7 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
 
       This will start capturing a video of the screen and saving it to the device's SD card. Replace <code>video_name</code> with the desired name for the video file.
       
-      The following error might occurs:
+      The following errors might occur:
       
             Unable to get output buffers (err=-38)
             Encoder failed (err=-38)
@@ -301,7 +301,14 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
             WARNING: failed at 1440x3120 retrying at 720x1280
 
       To [resolve](https://android.stackexchange.com/questions/168944/unable-to-get-output-buffers-err-38-when-attempting-to-screen-record-emulator) it, try to use the size option <code>--size widthxheight</code>.
+
+      Another error might occur:
       
+            /system/bin/sh: screenrecord: inaccessible or not found
+            
+     [Check](https://stackoverflow.com/questions/46482178/adb-screenrecord-command-not-found) if the device has a built-in recorder. Most devices should have the <code>screenrecord</code> included, but it seems some have it missing.
+
+
 4. Perform the actions that you want to capture in the video: Once the video capture is started, perform the actions that you want to capture in the video.
       
 5. Stop the screenrecord command: To stop the video capture and save the video, press CTRL+C in the terminal or command prompt. Alternately, use the following ADB command:
