@@ -306,7 +306,7 @@ You can use the _screenrecord_ command, which is an ADB shell utility to capture
       
             /system/bin/sh: screenrecord: inaccessible or not found
             
-     [Check](https://stackoverflow.com/questions/46482178/adb-screenrecord-command-not-found) if the device has a built-in recorder. Most devices should have the <code>screenrecord</code> included, but it seems some have it missing.
+     [Check](https://stackoverflow.com/questions/46482178/adb-screenrecord-command-not-found) if the device has a built-in recorder. Most devices (with recent Android versions) should have the <code>screenrecord</code> included, but it seems some older devices have it missing. To record a video in this case, use Android Studio's built-in options to record. The Play Store also avails many free recording apps, such AZRecorder.
 
 
 4. Perform the actions that you want to capture in the video: Once the video capture is started, perform the actions that you want to capture in the video.
