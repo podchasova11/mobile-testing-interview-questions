@@ -33,6 +33,7 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
 
       I don’t use <code>shell</code> in the <code>push</code> command, because I push from my computer. <code>adb push</code> is not a util that lives on my mobile device. It’s just a command to exchange files between the the host machine and the connected device. <code>push</code> and <code>pull</code> work in tandem. <code>pull</code> helps me get files from the device, while <code>push</code> helps me push files onto the device.
       
+      📝 If the destination directory name does not exist on the device, the command will create a new directory with that name.
 - [ ] <code>adb pull <remote_file> <local_location></code>: copy a file from the connected device to your computer
       
   - [ ] I often use the command to get a copy of my device screen recording on my computer. For example:
