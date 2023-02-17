@@ -241,7 +241,36 @@ Sometimes, package names change. To retrieve a list of 3-rd party packages, inst
  
 The package name convention is usually <code>com.app.company.project</code>. Once I know the package name, I run command <code>adb uninstall <package_name></code> to uninstall the app by that package name. The expected output is <code>Success</code>, and the app is gone from the device.
 
-  
+
+## I want to capture a screenshot. How can I do it with an adb command?
+
+Frequently, I need to capture a screenshot of the AUT on a mobile device to support my bug ticket. I use the <code>screencap</code> command in the following format:
+
+		% adb shell screencap /sdcard/image_name.png
+
+For example:
+
+		% adb pull /sdcard/image_name.png ~/Documents
+		/sdcard/image_name.png: 1 file pulled, 0 skipped 13.5 MB/s(177438 bytes in 0.013s)
+
+
+Not every Android device supports the JPEG format, some Samsung devices do. The official image file extension on Android is .png. The output will tell you about failure, but won’t return any info about success. That’s normal.
+
+First I take a screenshot, then I exit the <code>shell</code> and copy the file to my computer.
+
+There is a shortcut to execute <code>screencap</code> and file retrieval in one single command, which works on macOS and Windows:
+
+		adb exec-out screencap -p > ~/Documents/image_name.png
+
+The <code>-p</code> flag forces the file to be generated in the PNG format. This option is recommended on macOS, because it’s common when the file gets saved with the .png extension, but cannot be opened as a PNG file. On Windows, the <code>-p</code> option may not be required.
+
+The following shortcut only works on macOS:
+
+		adb shell screencap -p > ~/Documents/image_name.png
+
+Unfortunately, there is no equivalent trick for the <code>screenrecord</code> command.
+
+
 ## I want to capture a video. How can I do it with an adb command?
 
 You can use the _screenrecord_ command, which is an ADB shell utility to capture a video of the screen on an Android device (Android 4.4 (API level 19) and higher). The utility records screen activity to an MPEG-4 file. To do this, follow these steps:
