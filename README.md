@@ -56,9 +56,9 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
 - [ ] <code>adb logcat</code>: display the logical output for the connected device, which can be helpful for debugging
 - [ ] <code>adb shell dumpsys <system_service></code>: display detailed info about a specific system service on the device
       
-  - [ ] I often use the <code>dumpsys</code> util to to obtain the version info about the package. For example:
+  - [ ] I often use the <code>dumpsys</code> util to to obtain the minSDK version info about the package when selecting/configuring devices for proper test coverage. For example:
       
-           % adb shell dumpsys package com.|grep version
+           % adb shell dumpsys package com.myapp.app|grep version
            versionCode=13 minSDK=21 targetSDK=31 versionName=2.3.45
       
 - [ ] <code>adb reboot</code>: reboot the connected device
