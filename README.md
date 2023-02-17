@@ -354,8 +354,27 @@ Overall, using the ADB screenrecord command can be a convenient way to capture a
 
 ## You started working on your device and you observe a crash. How do you collect logs?
 
-![image](https://user-images.githubusercontent.com/70295997/209906650-c6030e5f-36c9-4d1e-896d-7d4caf7d9a98.png)
-![image](https://user-images.githubusercontent.com/70295997/209906715-be1f2aef-3809-4b4d-870f-848da18058ee.png)
+I use the [<code>logcat</code>](https://developer.android.com/studio/command-line/logcat) command-line tool which dumps a log of the system messages when the device throws an error and sends me messages that that are written from my app with the <code>Log</code> class.
+
+		% adb logcat
+		… (lots of output) -> as I keep doing something on my phone, traces keep adding up to the terminal output.
+
+For example, I tested an app that crashed on start. So, when I started my app, it crashed, and the crash got captured in the logs.
+
+To get the summary of the crash, I stopped the logcat execution with CTRL+C. Then I filtered out the log buffer for crashes. The <code>-b</code> option stands for buffer.
+
+		adb logcat -b crash
+
+I examined the output for any patterns/trends to identify the cause of the crash.  I zeroed in on the following traces:
+
+		———— beginning of crash
+		02-16 10:56:10.301	9639	9639	E	AndroidRuntime:	FATAL EXCEPTION:	main
+		02-16 10:56:10.301	9639	9639	E	AndroidRuntime:	com.myapp.android:	PID	9639
+		02-16 10:56:10.301	9639	9639	E	AndroidRuntime:	java.lang.RuntimeException: Unable to create application com.myapp.android.App:	com.getkeepsafe.relinker.MissingLibraryException:	liberal-jni.so
+
+The traces told me that the app crashed. The way I knew it was my AUT, not any other app, was by its package name <code>com.myapp.android</code>.
+
+This was especially helpful when reproducing the bug and collecting supporting artefacts for my devs to fix it. In order to get an attachable file for the Jira bug ticket, I redirected the logs to a file called <code>logcat.txt</code> on my machine, as in <code>adb logcat -b crash > logcat.txt</code>. Fixing the root cause, with the adequate justification, was a breeze after that. I verified the fix and closed the issue.
 
 ## How do you use <code>adb bugreport</code> command to collect the logs?
 
