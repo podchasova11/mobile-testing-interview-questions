@@ -36,12 +36,19 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
       📝 If the destination directory name does not exist on the device, the command will create a new directory with that name.
 - [ ] <code>adb pull <remote_file> <local_location></code>: copy a file from the connected device to your computer
       
-  - [ ] I often use the command to get a copy of my device screen recording on my computer. For example:
+  - [ ] I often use the command to get a copy of my device screen recording on my computer. I also utilize the command to get a copy of an app on my computer by its package name. For example:
       
            adb pull /sdcard/<video_name>.mp4 ~/Documents
-      
+           adb pull /data/app/com.app.company.project==/test_app.apk
+         
 - [ ] <code>adb logcat</code>: display the logical output for the connected device, which can be helpful for debugging
 - [ ] <code>adb shell dumpsys <system_service></code>: display detailed info about a specific system service on the device
+      
+  - [ ] I often use the <code>dumpsys</code> util to to obtain the version info about the package. For example:
+      
+           % adb shell dumpsys package com.|grep version
+           versionCode=13 minSDK=21 targetSDK=31 versionName=2.3.45
+      
 - [ ] <code>adb reboot</code>: reboot the connected device
 - [ ] <code>adb backup [-f <file>] [-apk|-noapk] [-shared|-noshared] [-all] [-system|-nosystem] [<packages…>]</code>: create a full backup of the connected device, including apps and their data, system settings, and more
 - [ ] <code>adb --help</code>: see a detailed list of all supported adb commands
