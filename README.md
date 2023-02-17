@@ -26,6 +26,14 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
 - [ ] <code>adb install <path_to_apk></code>: install an app (specified by the APK file) on the connected device
 - [ ] <code>adb uninstall <package_name></code>: uninstall an app from the connected device
 - [ ] <code>adb shell</code>: open a shell on the connected device, allowing you to run commands on the device directly
+      
+  - [ ] When I conduct interruption testing, I use the <code>adb shell</code> util to turm the mobile and WiFi service networks on and off. For example:
+      
+            adb shell svc data enable
+            adb shell svc data disable
+            adb shell svc wifi enable
+            adb shell svc wifi disable
+      
 - [ ] <code>adb push <local_file> <remote_location></code>: copy a file from your computer to the connected device     
   - [ ] When testing an upload feature on an app like YouTube or Instagram, I might need to push some files to my device’s <code>/sdcard</code> directory. I can copy a file (image, video, etc.) from the host machine to the mobile device with the following command:
 
