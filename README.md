@@ -33,6 +33,10 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
             adb shell svc data disable
             adb shell svc wifi enable
             adb shell svc wifi disable
+ 
+      In the context of interrupt testing, I can also mimick a call on an emulator:
+            
+            adb shell am start -a android.intent.action.CALL
       
 - [ ] <code>adb push <local_file> <remote_location></code>: copy a file from your computer to the connected device     
   - [ ] When testing an upload feature on an app like YouTube or Instagram, I might need to push some files to my device’s <code>/sdcard</code> directory. I can copy a file (image, video, etc.) from the host machine to the mobile device with the following command:
