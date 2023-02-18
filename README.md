@@ -437,7 +437,7 @@ I redirect the logcat output into the <code>logcat.txt</code> file.
 
 <img width="1313" alt="Screenshot 2023-02-17 at 4 21 59 PM" src="https://user-images.githubusercontent.com/70295997/219820379-63503d1c-de63-4d8f-b2bd-2c1b8477046b.png">
 	
-I attach this file along with other supporting documentation to my bug report.
+I attach this file along with other supporting documentation to my bug report. Then, I clear the buffer with the <code>adb logcat -c</code> command. New logs start accumulating in the logcat buffer from this point on, until I clear them again.
 	
 ## How do you use <code>adb bugreport</code> command to collect the logs?
 
