@@ -415,6 +415,26 @@ Above captioned is a partial log from my Pixel_6_Pro_API_33 emulator. Below is t
 	
 <img width="2190" alt="Screenshot 2023-02-17 at 2 40 06 PM" src="https://user-images.githubusercontent.com/70295997/219816762-ea7ad37e-26c7-4c65-b9a4-7fdadc1ddf30.png">
 
+I redirect the logcat output into the <code>logcat.txt</code> file. 
+	
+	% adb logcat -b crash > logcat.txt
+	^C
+	 ~
+	% pwd
+	/Users/lanabegunova
+	 ~
+	% ls
+	...
+	Desktop		Postman  	logcat.txt
+	...
+	 ~
+	% open logcat.txt
+	 ~
+
+<img width="1313" alt="Screenshot 2023-02-17 at 4 21 59 PM" src="https://user-images.githubusercontent.com/70295997/219820379-63503d1c-de63-4d8f-b2bd-2c1b8477046b.png">
+	
+I attach this file along with other supporting documentation to my bug report.
+	
 ## How do you use <code>adb bugreport</code> command to collect the logs?
 
 A bug report contains device logs, stack traces, and other diagnostic information to help you find and fix bugs in your app. To capture a bug report from your Android device, use the [<code>adb bugreport</code>](https://developer.android.com/studio/debug/bug-report)  command. Follow these steps:
