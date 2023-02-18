@@ -415,7 +415,7 @@ I stop the logcat execution with CTRL+C. Then I filter out the log buffer for cr
 	^C
 	 ~
 
-Above captioned is a partial log from my Pixel_6_Pro_API_33 emulator. Below is the output from my other emulator Pixel_6_API_33_ with a Samsung Galaxy S23 skin:
+Above captioned is a partial log from my Pixel_6_Pro_API_33 emulator. Below is the output from my other emulator Pixel_6_API_33 with a Samsung Galaxy S23 skin:
 	
 <img width="2190" alt="Screenshot 2023-02-17 at 2 40 06 PM" src="https://user-images.githubusercontent.com/70295997/219816762-ea7ad37e-26c7-4c65-b9a4-7fdadc1ddf30.png">
 
