@@ -471,7 +471,10 @@ Overall, the main difference between <code>adb logcat</code> and <code>adb bugre
 ## If you open your log, what is the information you check for?
 
 <img width="1712" alt="Screenshot 2023-02-17 at 7 08 04 PM" src="https://user-images.githubusercontent.com/70295997/219828634-3cceca8d-1924-4418-b02d-33b7446d4cbd.png">
+<img width="1052" alt="Screenshot 2023-02-17 at 9 20 48 PM" src="https://user-images.githubusercontent.com/70295997/219842663-2a5665a4-bdaa-477d-8ad6-817e84a1fd78.png">
 
+	
+	
 ![image](https://user-images.githubusercontent.com/70295997/209907664-e7ad528b-2daa-496f-8234-36a4aeb9f8be.png)
 ![image](https://user-images.githubusercontent.com/70295997/209907714-6be2cb63-6d35-49b2-833b-d8f2036c862f.png)
 
