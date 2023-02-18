@@ -381,9 +381,13 @@ Upon installation, the app attempts to launch and crashes on-start instead. I ca
 	 ~
 	% adb -s emulator-5554 logcat
 
-There’s a lot of output in the terminal, including historical data from a minute or a day ago, depending on the size of my logcat output buffer. It means that a device has a storage space of a certain size allocated to the logging. Normally it’s 256 KB, but the number may vary. New data keeps getting added to the log file. When it reaches its size limit, it starts pushing out the older info. Simply put, I have a log buffer with historical data, but that data is still relatively recent. Comparatively, a computer server log has a much longer life time than a mobile device log. Server might have information stored for months, depending on how they are configured.
+There’s a lot of output in the terminal, including historical data from a minute or a day ago, depending on the size of my logcat output buffer. It means that o device has a storage space of a certain size allocated to the logging. Normally it’s 256 KB, and it goes up to 1 MB with the Developer Options turned on, but the number may vary. New data keeps getting added to the log file. When it reaches its size limit, it starts pushing out the older info. Simply put, I have a log buffer with historical data, but that data is still relatively recent. Comparatively, a computer server log has a much longer life time than a mobile device log. Server might have information stored for months, depending on how they are configured.
 
-Nevertheless, the life time of mobile device logcat buffer is sufficient when I encounter a crash on a disconnected device and act promptly to connect it to my computer. Then, I run the <code>adb logcat -b crash</code> command. I definitely still have the device data from a few minutes ago. That data keeps getting pushed out with newer traces in the log file. So, it’s crucial to be fast on my toes in such cases.
+I can adjust the logger buffer size under the device’s System > Developer options > Logger buffer sizes:
+	
+<img src="https://user-images.githubusercontent.com/70295997/219821682-5bcd6bfd-3772-4227-9ed5-44dad7c45f71.png" width=300>
+
+Nevertheless, the default size and life time of mobile device logcat buffer is sufficient when I encounter a crash on a disconnected device and act promptly to connect it to my computer. Then, I run the <code>adb logcat -b crash</code> command. I definitely still have the device data from a few minutes ago. That data keeps getting pushed out with newer traces in the log file. So, it’s crucial to be fast on my toes in such cases.
 
 
 I stop the logcat execution with CTRL+C. Then I filter out the log buffer for crashes. The <code>-b</code> option stands for buffer.
