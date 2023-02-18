@@ -362,27 +362,58 @@ Overall, using the ADB screenrecord command can be a convenient way to capture a
 
 ## You started working on your device and you observe a crash. How do you collect logs?
 
-I use the [<code>logcat</code>](https://developer.android.com/studio/command-line/logcat) command-line tool which dumps a log of the system messages when the device throws an error and sends me messages that that are written from my app with the <code>Log</code> class.
+I follow the practice of supporting my bug reports with screenshots and videos. But it’s even better and more helpful to my devs, when I attach the ADB l[ogcat](https://developer.android.com/studio/command-line/logcat) output to justify the unexpected behavior. In the logs the devs can find useful info that is printed by the system, or the additional info they themselves have added to logging. Often devs add their own logs, and those get printed in the output.
 
-		% adb logcat
-		… (lots of output) -> as I keep doing something on my phone, traces keep adding up to the terminal output.
+For example, I have the newly-built .apk file from my devs. I want to install the AUT on my running emulator and capture the logs from it.
 
-For example, I tested an app that crashed on start. So, when I started my app, it crashed, and the crash got captured in the logs.
+	% adb devices
+	List of devices attached
+	emulator-5554	device
+	 ~
+	% adb install /Users/lanabegunova/Desktop/asf/mobile/myapp.apk
+	Performing Streamed Install
+	Success
 
-To get the summary of the crash, I stopped the logcat execution with CTRL+C. Then I filtered out the log buffer for crashes. The <code>-b</code> option stands for buffer.
 
-		adb logcat -b crash
+Upon installation, the app attempts to launch and crashes on-start instead. I capture a quick screenshot for the bug report and move onto the retrieval of the crash summary:
 
-I examined the output for any patterns/trends to identify the cause of the crash.  I zeroed in on the following traces:
+	% adb shell screencap -p > ~/Desktop/app_crash.png
+	 ~
+	% adb -s emulator-5554 logcat
 
-		———— beginning of crash
-		02-16 10:56:10.301	9639	9639	E	AndroidRuntime:	FATAL EXCEPTION:	main
-		02-16 10:56:10.301	9639	9639	E	AndroidRuntime:	com.myapp.android:	PID	9639
-		02-16 10:56:10.301	9639	9639	E	AndroidRuntime:	java.lang.RuntimeException: Unable to create application com.myapp.android.App:	com.getkeepsafe.relinker.MissingLibraryException:	liberal-jni.so
+There’s a lot of output in the terminal, including historical data from a minute or a day ago, depending on the size of my logcat output buffer. It means that a device has a storage space of a certain size allocated to the logging. Normally it’s 256 KB, but the number may vary. New data keeps getting added to the log file. When it reaches its size limit, it starts pushing out the older info. Simply put, I have a log buffer with historical data, but that data is still relatively recent. Comparatively, a computer server log has a much longer life time than a mobile device log. Server might have information stored for months, depending on how they are configured.
 
-The traces told me that the app crashed. The way I knew it was my AUT, not any other app, was by its package name <code>com.myapp.android</code>.
+Nevertheless, the life time of mobile device logcat buffer is sufficient when I encounter a crash on a disconnected device and act promptly to connect it to my computer. Then, I run the <code>adb logcat -b crash</code> command. I definitely still have the device data from a few minutes ago. That data keeps getting pushed out with newer traces in the log file. So, it’s crucial to be fast on my toes in such cases.
 
-This was especially helpful when reproducing the bug and collecting supporting artefacts for my devs to fix it. In order to get an attachable file for the Jira bug ticket, I redirected the logs to a file called <code>logcat.txt</code> on my machine, as in <code>adb logcat -b crash > logcat.txt</code>. Fixing the root cause, with the adequate justification, was a breeze after that. I verified the fix and closed the issue.
+
+I stop the logcat execution with CTRL+C. Then I filter out the log buffer for crashes. The <code>-b</code> option stands for buffer.
+
+	% adb logcat -b crash
+	--------- beginning of crash
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: FATAL EXCEPTION: main
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: Process: com.myapp.android, PID: 3753
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: java.lang.RuntimeException: Unable to create application com.myapp.android.App: com.getkeepsafe.relinker.MissingLibraryException: librealm-jni.so
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6764)
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2133)
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+	02-14 16:20:34.060  3753  3753 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+	…
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: FATAL EXCEPTION: main
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: Process: com.myapp.android, PID: 10818
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: java.lang.RuntimeException: Unable to create application com.myapp.android.App: com.getkeepsafe.relinker.MissingLibraryException: librealm-jni.so
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6764)
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2133)
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+	…
+	02-17 13:07:45.047 10818 10818 E AndroidRuntime: 	... 9 more
+	^C
+	 ~
+
+Above captioned is a partial log from my Pixel_6_Pro_API_33 emulator. Below is the output from my other emulator Pixel_6_API_33_ with a Samsung Galaxy S23 skin:
+	
+<img width="2190" alt="Screenshot 2023-02-17 at 2 40 06 PM" src="https://user-images.githubusercontent.com/70295997/219816762-ea7ad37e-26c7-4c65-b9a4-7fdadc1ddf30.png">
 
 ## How do you use <code>adb bugreport</code> command to collect the logs?
 
@@ -408,7 +439,10 @@ Overall, the main difference between <code>adb logcat</code> and <code>adb bugre
 ![image](https://user-images.githubusercontent.com/70295997/209907319-64e72fec-8e67-4fa2-84d5-4a85c575a154.png)
 
 ## You use the Gmail app and you type and a crash happens. How do you justify that crash for this particular app?
+	
+<img width="2190" alt="Screenshot 2023-02-17 at 2 40 06 PM" src="https://user-images.githubusercontent.com/70295997/219811326-dbe2996b-9fb7-4dbf-b3c7-68db1464d529.png">
 
+	
 ![image](https://user-images.githubusercontent.com/70295997/209907467-9cbbc155-3953-46fb-a510-8bef09a7639d.png)
 ![image](https://user-images.githubusercontent.com/70295997/209907558-372c4b29-9387-4f57-92c3-5988be06fa38.png)
 ![image](https://user-images.githubusercontent.com/70295997/209907614-5e5ac435-291c-471a-ba71-805d2c7f08ef.png)
