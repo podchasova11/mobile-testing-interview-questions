@@ -460,9 +460,6 @@ Overall, the main difference between <code>adb logcat</code> and <code>adb bugre
 
 ## You use the Gmail app and you type and a crash happens. How do you justify that crash for this particular app?
 	
-<img width="2190" alt="Screenshot 2023-02-17 at 2 40 06 PM" src="https://user-images.githubusercontent.com/70295997/219811326-dbe2996b-9fb7-4dbf-b3c7-68db1464d529.png">
-
-	
 ![image](https://user-images.githubusercontent.com/70295997/209907467-9cbbc155-3953-46fb-a510-8bef09a7639d.png)
 ![image](https://user-images.githubusercontent.com/70295997/209907558-372c4b29-9387-4f57-92c3-5988be06fa38.png)
 ![image](https://user-images.githubusercontent.com/70295997/209907614-5e5ac435-291c-471a-ba71-805d2c7f08ef.png)
