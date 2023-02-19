@@ -472,6 +472,7 @@ Overall, the main difference between <code>adb logcat</code> and <code>adb bugre
 
 <img width="1712" alt="Screenshot 2023-02-17 at 7 08 04 PM" src="https://user-images.githubusercontent.com/70295997/219828634-3cceca8d-1924-4418-b02d-33b7446d4cbd.png">
 <img width="1712" alt="Screenshot 2023-02-17 at 9 42 50 PM" src="https://user-images.githubusercontent.com/70295997/219843408-3fbfe4ae-431b-4952-a576-15c2bd9de3ee.png">
+<img width="1712" alt="Screenshot 2023-02-18 at 10 48 54 PM" src="https://user-images.githubusercontent.com/70295997/219933488-fc7380c1-9160-409e-bad7-7c25b148d7c6.png">
 
 	
 ![image](https://user-images.githubusercontent.com/70295997/209907664-e7ad528b-2daa-496f-8234-36a4aeb9f8be.png)
