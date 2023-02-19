@@ -439,6 +439,10 @@ I redirect the logcat output into the <code>logcat.txt</code> file.
 	
 I attach this file along with other supporting documentation to my bug report. Then, I clear the buffer with the <code>adb logcat -c</code> command. New logs start accumulating in the logcat buffer from this point on, until I clear them again.
 	
+Optionally, I can use the <code>adb logcat -b crash | tee logfile.txt</code> to concurrently print the output into both the terminal and the file.
+	
+Command <code>adb logcat | grep ‘myapp’</code> filters the log for a particular app. Command <code>adb logcat | grep -E ‘(myapp1|myapp2)’</code> helps to grep/find more than one word/string.
+	
 ## How do you use <code>adb bugreport</code> command to collect the logs?
 
 A bug report contains device logs, stack traces, and other diagnostic information to help you find and fix bugs in your app. To capture a bug report from your Android device, use the [<code>adb bugreport</code>](https://developer.android.com/studio/debug/bug-report)  command. Follow these steps:
