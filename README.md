@@ -470,6 +470,8 @@ Overall, the main difference between <code>adb logcat</code> and <code>adb bugre
 
 ## If you open your log, what is the information you check for?
 
+### Important Information to Check for in Android Logs → ‘adb logcat’ command, output, filtering
+	
 When examining a log file from an Android device, there are several pieces of information I look for to help identify the cause of an issue or crash, or understand the behavior of the system:
 1. **Timestamps** - Help to understand the sequence of events that occurred and identify patterns or trends. Indicate when the message was generated.
 2. **Log Levels** - Different log levels (such as ‘debug’, ‘info’, ‘warning’, and ‘error’) indicate the severity of of an issue or the importance of the message. Examining log messages with higher log levels (e.g., ‘warning’ and ‘error’) can be particularly helpful for identifying issues.
