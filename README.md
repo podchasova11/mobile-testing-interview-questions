@@ -184,7 +184,10 @@ Overall, mobile fragmentation can make it challenging for developers to create a
 
 ## What is ANR and how does it differ from crashes?
 
-[Detailed Response](https://github.com/lana-20/anr-vs-crash)
+[ANR vs. Crash](https://github.com/lana-20/anr-vs-crash)
+
+[Crash vs. ANR + ADB logcat vs. bugreport](https://github.com/lana-20/android-crash-anr-logcat-bugreport)
+
 
 ## If you have several Android devices (virtual emulators and/or physical phones) connected to your machine, how do you install an application?
 
