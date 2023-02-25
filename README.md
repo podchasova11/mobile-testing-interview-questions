@@ -63,6 +63,7 @@ Here is a list of some common ADB (Android Debug Bridge) commands which I use fr
  
 	On Windows, replace <code>grep</code> with either <code>find</code> or <code>findstr</code> .
 - [ ] <code>adb reboot</code>: reboot the connected device
+- [ ] [<code>adb forward tcp:9222 localabstract:chrome_devtools_remote</code>](https://github.com/lana-20/adb-forward-tcp): call out to the Android Debug Bridge and forward the Chrome dev tools port on the device to the local port 9222
 - [ ] [<code>adb shell setprop debug.layout true</code>](https://github.com/lana-20/adb-debug-layout): turn on the debug mode
 - [ ] <code>adb backup [-f <file>] [-apk|-noapk] [-shared|-noshared] [-all] [-system|-nosystem] [<packages…>]</code>: create a full backup of the connected device, including apps and their data, system settings, and more
 - [ ] <code>adb --help</code>: see a detailed list of all supported adb commands
